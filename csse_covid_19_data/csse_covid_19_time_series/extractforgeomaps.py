@@ -21,15 +21,19 @@ print(line_count)
 print(shortData)
 
 with open("shortdata.txt", "w") as f:
+    f.write("[")
     for row in shortData:
-        f.write("%s\n" % row)
-
+        f.write("%s,\n" % row)
+    f.write("]")
+    
 f.close()
 
 with open("fulldata.txt", "w") as f:
+    f.write("[")
     for row in visualizationData:
-        f.write("%s\n" % row)
-
+        f.write("%s,\n" % row)
+    f.write("]")
+    
 f.close()
 
 
